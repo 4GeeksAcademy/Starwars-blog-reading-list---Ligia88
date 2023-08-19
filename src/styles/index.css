@@ -14,6 +14,13 @@
     width: 100%;
 }
     
+/* Estilos para la clase "button footer" */
+.button.footer {
+    display: flex;
+    justify-content: space-between; /* Corregido: agregado guiones en "justify-content" y "space-between" */
+    /* Otros estilos que desees aplicar al div */
+}
+
 .my-carousel {
     border: 1px solid black;
     display: flex;

@@ -14,13 +14,15 @@ export const Home = () => {
 						<img src="https://picsum.photos/200/300" alt="Descripción de la imagen" />
 					</div>
 					<div>
-						<p>Gender</p>
-						<p>Hair Color</p>
-						<p>Eye Color</p>
-						<p>Cuarto párrafo</p>
+					        <p>Name</p>
+							<p>Gender</p>
+							<p>Hair Color</p>
+							<p>Eye Color</p>
 					</div>
+					<div className="button footer">
 					<button className="btn btn-primary">Learn More</button>
 					<button>C</button>
+					</div>
 				</div>
 
 				{/* Clones de la carta */}
@@ -35,7 +37,7 @@ export const Home = () => {
 							<p>Hair Color</p>
 							<p>Eye Color</p>
 						</div>
-					<div className="btn footer">
+					<div className="button footer">
 					<button className="btn btn-primary">Learn More</button>
 					<button>C</button>
 					</div>
