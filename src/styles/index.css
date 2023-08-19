@@ -3,12 +3,20 @@
 */
 .my-card {
     border: 1px solid red;
-    width: 300px;
-        /* Otros estilos que desees aplicar al div */
-    }
+    min-width: 300px;
+    margin-left: 5px;
+    padding: 15px;
+    /* Otros estilos que desees aplicar al div */
+}
+
+/* Estilo para el div que contiene la imagen dentro de las cartas */
+.my-card > div > img {
+    width: 100%;
+}
     
-    .my-carousel {
-        border: 1px solid black;
-        
-            /* Otros estilos que desees aplicar al div */
-        }
+.my-carousel {
+    border: 1px solid black;
+    display: flex;
+    overflow-x: scroll;
+    /* Otros estilos que desees aplicar al div */
+}

@@ -6,11 +6,12 @@ export const Home = () => {
 		<div className="container">
 			<h1 className="text-danger">Characters</h1>
 
-			{/* Carta original */}
-			<div className="my-carousel">
-				<div className="my-card">
+			{/* Contenedor de cartas */}
+			<div className="my-carousel d-flex overflow-x-scroll">
+				{/* Carta original */}
+				<div className="border border-danger my-card mx-2"> {/* Agregamos la clase mx-2 para agregar un margen horizontal entre las cartas */}
 					<div>
-						<img src="" alt="Descripción de la imagen" />
+						<img src="https://picsum.photos/200/300" alt="Descripción de la imagen" />
 					</div>
 					<div>
 						<p>Gender</p>
@@ -21,26 +22,27 @@ export const Home = () => {
 					<button className="btn btn-primary">Learn More</button>
 					<button>C</button>
 				</div>
-			</div>
 
-			{/* Clones de la carta */}
-			{Array.from({ length: 8 }).map((_, index) => (
-				<div key={index} className="border border-danger">
-					<div className="my-card">
+				{/* Clones de la carta */}
+				{Array.from({ length: 8 }).map((_, index) => (
+					<div key={index} className="border border-danger my-card mx-2"> {/* Agregamos la clase mx-2 para agregar un margen horizontal entre las cartas */}
 						<div>
-							<img src="" alt="Descripción de la imagen" />
+						<img src="https://picsum.photos/200/300" alt="Descripción de la imagen" />
 						</div>
 						<div>
+						    <p>Name</p>
 							<p>Gender</p>
 							<p>Hair Color</p>
 							<p>Eye Color</p>
-							<p>Cuarto párrafo</p>
 						</div>
-						<button className="btn btn-primary">Learn More</button>
-						<button>C</button>
+					<div className="btn footer">
+					<button className="btn btn-primary">Learn More</button>
+					<button>C</button>
 					</div>
-				</div>
-			))}
+
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };
