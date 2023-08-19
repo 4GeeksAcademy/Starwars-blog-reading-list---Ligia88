@@ -1,3 +1,14 @@
 /* 
     General Styles
 */
+.my-card {
+    border: 1px solid red;
+    width: 300px;
+        /* Otros estilos que desees aplicar al div */
+    }
+    
+    .my-carousel {
+        border: 1px solid black;
+        
+            /* Otros estilos que desees aplicar al div */
+        }
