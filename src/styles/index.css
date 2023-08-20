@@ -4,7 +4,7 @@
 .my-card {
     border: 1px solid red;
     min-width: 300px;
-    margin-left: 5px;
+    margin-right: 5px;
     padding: 15px;
     /* Otros estilos que desees aplicar al div */
 }
@@ -13,9 +13,13 @@
 .my-card > div > img {
     width: 100%;
 }
-    
+
+.body-text, .button-footer {
+    padding: 15px;
+}
+ 
 /* Estilos para la clase "button footer" */
-.button.footer {
+.button-footer {
     display: flex;
     justify-content: space-between; /* Corregido: agregado guiones en "justify-content" y "space-between" */
     /* Otros estilos que desees aplicar al div */

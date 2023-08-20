@@ -13,15 +13,15 @@ export const Home = () => {
 					<div>
 						<img src="https://picsum.photos/200/300" alt="Descripción de la imagen" />
 					</div>
-					<div>
+					<div className="">
 					        <p>Name</p>
 							<p>Gender</p>
 							<p>Hair Color</p>
 							<p>Eye Color</p>
 					</div>
-					<div className="button footer">
+					<div className="button-footer">
 					<button className="btn btn-primary">Learn More</button>
-					<button>C</button>
+					<button className="btn btn-warning">C</button>
 					</div>
 				</div>
 
@@ -37,9 +37,9 @@ export const Home = () => {
 							<p>Hair Color</p>
 							<p>Eye Color</p>
 						</div>
-					<div className="button footer">
+					<div className="button-footer">
 					<button className="btn btn-primary">Learn More</button>
-					<button>C</button>
+					<button className="btn btn-warning">C</button>
 					</div>
 
 					</div>
