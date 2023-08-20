@@ -2,7 +2,7 @@
     General Styles
 */
 .my-card {
-    border: 1px solid red;
+    border: 1px solid grey;
     min-width: 300px;
     margin-right: 5px;
     padding: 15px;
@@ -26,7 +26,7 @@
 }
 
 .my-carousel {
-    border: 1px solid black;
+    border: 1px solid grey;
     display: flex;
     overflow-x: scroll;
     /* Otros estilos que desees aplicar al div */
