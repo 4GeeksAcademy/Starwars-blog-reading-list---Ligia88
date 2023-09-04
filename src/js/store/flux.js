@@ -35,11 +35,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(`${getStore().urlBase}/people`)
 				.then(response => response.json())
 				.then(data => {
-					
-				});
+					for (let item of data.results) {
+						fetch(item.url)
+							.then((data) => {
+								setStore({
+									Characters: data.results
+								})
+						}
+					});
+				}
 			}
-		}
+		};
 	};
-};
-
-export default getState;
+	
+	export default getState;
