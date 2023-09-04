@@ -39,13 +39,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 						fetch(item.url)
 							.then((data) => {
 								setStore({
-									Characters: data.results
+									Characters: [... getStore().characters, data.results]
 								})
+							})
 						}
-					});
-				}
-			}
-		};
-	};
+					  }
+					  ).catch((err) =>{
+						console.log(err)
+				  })
+				   }
+				} 
+			  }; 
+			};
 	
 	export default getState;
