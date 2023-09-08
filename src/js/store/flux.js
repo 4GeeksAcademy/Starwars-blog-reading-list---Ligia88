@@ -2,7 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			Characters: [],
-			Planets: []
+			Planets: [],
 			urlBase: "https://www.swapi.tech/api",
 			demo: [
 				{
