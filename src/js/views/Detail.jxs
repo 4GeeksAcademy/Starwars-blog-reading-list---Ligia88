@@ -1,0 +1,35 @@
+import  React, {useContext, useEffect, useState} from 'react'
+import { Context } from '../store/appContext'
+import { useParams } from 'react-router-dom'; 
+
+const Detail =()=>{
+    const params = useParams{}
+    const [search , setSearch] = useState({})
+
+    const { store } = useContext(Context)
+
+    const details = () => {
+        const { nature, id } = useParams(); // Desestructura nature e id de los parámetros
+      
+        if (params.nature == "characters") { // Corrige el uso de () en lugar de {}
+          const search = store.characters.find((item) => item._id == params.id); // Corrige la comparación y el uso de {}
+          setsearch(search);
+        } else {
+          const search = store.planets.find((item) => item._id == params.id); // Corrige la comparación y el uso de {}
+          console.log(search);
+        }
+      };
+      
+      export default details;
+      
+useEffect(()=>{
+    details() // revisar
+},[])
+
+  return(
+    <>
+    <h1/> Detail <h1/>
+    </>
+    )
+}
+export default Detail;

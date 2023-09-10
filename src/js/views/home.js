@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
 	const { store } = useContext(Context)
@@ -13,7 +14,7 @@ export const Home = () => {
 						<div className="my-card" key={i}>
 							<h1 className="text-danger my-title">{Characters}</h1>
 							<div>
-								<img src="https://picsum.photos/200/300" alt="Descripción de la imagen" />
+								<img src={'https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg'} alt="Characters" />
 							</div>
 							<div className="body-text">
 								<p><strong>Name:</strong> {item.properties?.name}</p>
@@ -23,7 +24,7 @@ export const Home = () => {
 
 							</div>
 							<div className="button-footer">
-								<button className="btn btn-primary">Learn More</button>
+								<Link to={'/characters/${item._id}'} className="btn btn-primary">Learn More</Link>
 								<button className="btn btn-warning">C</button>
 							</div>
 						</div>
@@ -34,20 +35,24 @@ export const Home = () => {
 
 			{/* Contenedor de Planets */}
 			<div className="my-carousel d-flex overflow-x-scroll">
-				<div className="my-card">
+				{store.planets.map((item)=>{
+                    return(
+						<div className="my-card">
 					<h1 className="text-danger my-title">Planets</h1>
 					<div>
-						<img src="https://picsum.photos/200/300" alt="Descripción de la imagen" />
+						<img src={'https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg'} alt="Planets" />
 					</div>
 					<div className="body-text">
-						<p>Population</p>
-						<p>Terraine</p>
+						<p>Population: {item.properties.population}</p>
+						<p>Terraine: {item.properties.terraine}</p>
 					</div>
 					<div className="button-footer">
-						<button className="btn btn-primary">Learn More</button>
+						<Link to={'/planets/${item._id}'}className="btn btn-primary">Learn More</Link>
 						<button className="btn btn-warning">C</button>
 					</div>
 				</div>
+					)
+				})}
 				{/* Clones de la carta */}
 			</div>
 		</div>
