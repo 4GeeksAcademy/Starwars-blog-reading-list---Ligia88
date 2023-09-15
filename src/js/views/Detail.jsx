@@ -3,7 +3,7 @@ import { Context } from '../store/appContext'
 import { useParams } from 'react-router-dom'; 
 
 const Detail =()=>{
-    const params = useParams{}
+    const params = useParams()
     const [search , setSearch] = useState({})
 
     const { store } = useContext(Context)
@@ -20,7 +20,7 @@ const Detail =()=>{
         }
       };
       
-      export default details;
+    
       
 useEffect(()=>{
     details() // revisar

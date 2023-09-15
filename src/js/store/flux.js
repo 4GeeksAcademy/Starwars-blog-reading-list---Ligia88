@@ -32,42 +32,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 				setStore({ demo: demo });
 			},
-			getCharacters: () => {
-				fetch(`${getStore().urlBase}/people`)
-				.then(response => response.json())
-				.then(data => {
-					for (let item of data.results) {
-						fetch(item.url)
-							.then((data) => {
-								setStore({
-									Characters: [... getStore().characters, data.results]
-								})
-							})
-						}
-					  }
-					  ).catch((err) =>{
-						console.log(err)
-				  })
-				   },
-				   getPlanets: () => {
-					fetch(`${getStore().urlBase}/planets`)
+			getCharacters: async () => {
+				let response = await fetch(`${getStore().urlBase}/people`)
+				let data = await response.json()
+				console.log("characters")
+				for (let item of data.results) {
+					let response2 = await fetch(item.url)
+					let data2 = await response2.json()
+					setStore({
+						Characters: [...getStore().Characters, data2.result]
+					})
+				}
+			},
+			getPlanets: () => {
+				fetch(`${getStore().urlBase}/planets`)
 					.then(response => response.json())
 					.then(data => {
 						for (let item of data.results) {
 							fetch(item.url)
 								.then((data) => {
 									setStore({
-										planets: [... getStore().Planets, data.results]
+										planets: [...getStore().Planets, data.results]
 									})
 								})
-							}
-						  }
-						  ).catch((err) =>{
-							console.log(err)
-					  })
-					   }
-				} 
-			  }; 
-			};
-	
-	export default getState;
+						}
+					}
+					).catch((err) => {
+						console.log(err)
+					})
+			}
+		}
+	};
+};
+
+export default getState;
