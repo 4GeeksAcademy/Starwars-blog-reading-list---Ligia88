@@ -44,25 +44,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				}
 			},
-			getPlanets: () => {
-				fetch(`${getStore().urlBase}/planets`)
-					.then(response => response.json())
-					.then(data => {
+			getPlanets: async () => {
+				let response = await fetch(`${getStore().urlBase}/planets`)
+				let data = await response.json()
+				console.log("planets")
 						for (let item of data.results) {
-							fetch(item.url)
-								.then((data) => {
+							let response2 = await fetch(item.url)
+							let data2 = await response2.json()
 									setStore({
-										planets: [...getStore().Planets, data.results]
-									})
-								})
+										Planets: [...getStore().Planets, data2.result]
+									});
+								}
 						}
-					}
-					).catch((err) => {
-						console.log(err)
-					})
-			}
-		}
-	};
+					
+              
+        }
+    };
 };
 
 export default getState;
