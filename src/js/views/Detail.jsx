@@ -12,11 +12,11 @@ const Detail =()=>{
 
       
         if (params.nature == "characters") { 
-          const searchFind = store.characters.find((item) => item._id == params.id); 
-          setsearch(searchFind);
+          const searchFind = store.Characters.find((item) => item._id == params.id); 
+          setSearch(searchFind);
         } else {
-          const searchFind = store.planets.find((item) => item._id == params.id); 
-          setsearch(searchFind);
+          const searchFind = store.Planets.find((item) => item._id == params.id); 
+          setSearch(searchFind);
         }
       };
       
@@ -29,6 +29,7 @@ useEffect(()=>{
   return(
     <>
     <h1/> {search?.properties?.name} <h1/>
+    <h1/> {search?.properties?.gender} <h1/>
     </>
     )
 }

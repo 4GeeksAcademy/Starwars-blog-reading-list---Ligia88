@@ -24,7 +24,7 @@ export const Home = () => {
 
 							</div>
 							<div className="button-footer">
-								<Link to={'/characters/${item._id}'} className="btn btn-primary">Learn More</Link>
+								<Link to={`/characters/${item._id}`} className="btn btn-primary">Learn More</Link>
 								<button className="favorite-button">
 									<span className="heart-icon" aria-label="Añadir a favoritos" role="img">❤️</span>
 								</button>
@@ -47,10 +47,10 @@ export const Home = () => {
 							</div>
 							<div className="body-text">
 								<p>Population: {item.properties.population}</p>
-								<p>Terraine: {item.properties.terraine}</p>
+								<p>Terraine: {item.properties.name}</p>
 							</div>
 							<div className="button-footer">
-								<Link to={'/planets/${item._id}'} className="btn btn-primary">Learn More</Link>
+								<Link to={`/planets/${item._id}`} className="btn btn-primary">Learn More</Link>
 								<button className="favorite-button">
 									<span className="heart-icon" aria-label="Añadir a favoritos" role="img">❤️</span>
 								</button>
