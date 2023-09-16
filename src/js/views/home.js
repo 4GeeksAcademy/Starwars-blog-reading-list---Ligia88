@@ -25,7 +25,10 @@ export const Home = () => {
 							</div>
 							<div className="button-footer">
 								<Link to={'/characters/${item._id}'} className="btn btn-primary">Learn More</Link>
-								<button className="btn btn-warning">C</button>
+								<button className="favorite-button">
+									<span className="heart-icon" aria-label="Añadir a favoritos" role="img">❤️</span>
+								</button>
+
 							</div>
 						</div>
 					);
@@ -48,7 +51,10 @@ export const Home = () => {
 							</div>
 							<div className="button-footer">
 								<Link to={'/planets/${item._id}'} className="btn btn-primary">Learn More</Link>
-								<button className="btn btn-warning">C</button>
+								<button className="favorite-button">
+									<span className="heart-icon" aria-label="Añadir a favoritos" role="img">❤️</span>
+								</button>
+
 							</div>
 						</div>
 					)

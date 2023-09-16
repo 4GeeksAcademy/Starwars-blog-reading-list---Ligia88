@@ -1,0 +1,36 @@
+/* Estilos para el navbar */
+.navbar {
+    background-color: #343a40; /* Cambia el color de fondo del navbar */
+    color: white; /* Cambia el color del texto del navbar a blanco */
+  }
+  
+  /* Estilos para el enlace "Star Wars" en el navbar */
+  .navbar-brand {
+    font-size: 24px; /* Tamaño del texto del enlace */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  /* Estilos para el botón de Favoritos */
+  .dropdown-toggle {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+  }
+  
+  /* Estilos para el menú desplegable de Favoritos */
+  .dropdown-menu {
+    background-color: #343a40; /* Color de fondo del menú desplegable */
+    color: white; /* Color del texto del menú desplegable */
+  }
+  
+  /* Estilos para los elementos del menú desplegable */
+  .dropdown-item {
+    color: white; /* Color del texto de los elementos del menú desplegable */
+  }
+  
+  /* Estilos para los elementos del menú desplegable al pasar el mouse sobre ellos */
+  .dropdown-item:hover {
+    background-color: #007bff; /* Cambia el color de fondo al pasar el mouse */
+    color: white; /* Cambia el color del texto al pasar el mouse */
+  }
+  
