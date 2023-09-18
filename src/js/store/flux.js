@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			Characters: [],
 			Planets: [],
+			favorites: [],
 			urlBase: "https://www.swapi.tech/api",
 			demo: [
 				{
@@ -48,18 +49,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let response = await fetch(`${getStore().urlBase}/planets`)
 				let data = await response.json()
 				console.log("planets")
-						for (let item of data.results) {
-							let response2 = await fetch(item.url)
-							let data2 = await response2.json()
-									setStore({
-										Planets: [...getStore().Planets, data2.result]
-									});
-								}
-						}
-					
-              
-        }
-    };
+				for (let item of data.results) {
+					let response2 = await fetch(item.url)
+					let data2 = await response2.json()
+					setStore({
+						Planets: [...getStore().Planets, data2.result]
+					}); 
+				}
+			},
+			
+			guardarFavoritos (nombre){
+				const store = getStore();
+				const fav = store.favorites;
+				const newFavoritos = [...fav,{name:nombre,id:fav.length}];
+				setStore({favorites:newFavoritos}) 
+				const actions = getActions();
+				const item = {name:nombre,id:fav.length}
+				console.log(nombre)
+			}
+
+
+		}
+	};
 };
 
 export default getState;

@@ -3,8 +3,9 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
+
 export const Home = () => {
-	const { store } = useContext(Context)
+	const { store,actions } = useContext(Context)
 	return (
 		<div className="container">
 			{/* Contenedor de Characters */}
@@ -26,7 +27,7 @@ export const Home = () => {
 							<div className="button-footer">
 								<Link to={`/characters/${item._id}`} className="btn btn-primary">Learn More</Link>
 								<button className="favorite-button">
-									<span className="heart-icon" aria-label="Añadir a favoritos" role="img">❤️</span>
+									onClick = {()=>{actions.guardarFavoritos(item.properties?.name);}} <span className="heart-icon" aria-label="Añadir a favoritos" role="img">❤️</span>
 								</button>
 
 							</div>

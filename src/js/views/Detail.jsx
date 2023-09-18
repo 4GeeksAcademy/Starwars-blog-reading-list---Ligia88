@@ -30,7 +30,15 @@ useEffect(()=>{
     <>
     <h1/> {search?.properties?.name} <h1/>
     <h1/> {search?.properties?.gender} <h1/>
+    <h1/> {search?.properties?.hair_color} <h1/>
+    <h1/> {search?.properties?.eye_color} <h1/>
+    <h1/> {search?.properties?.climate} <h1/>
+    <h1/> {search?.properties?.terraine} <h1/>
+    <h1/> {search?.properties?.population} <h1/>
+    
     </>
+
+
     )
 }
 export default Detail;
