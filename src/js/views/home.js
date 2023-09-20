@@ -27,7 +27,10 @@ export const Home = () => {
 							<div className="button-footer">
 								<Link to={`/characters/${item._id}`} className="btn btn-primary">Learn More</Link>
 								<button className="favorite-button">
-									onClick = {()=>{actions.guardarFavoritos(item.properties?.name);}} <span className="heart-icon" aria-label="Añadir a favoritos" role="img">❤️</span>
+								<span className="heart-icon" 
+								aria-label="Añadir a favoritos" 
+								role="img"
+									onClick = {()=>{actions.guardarFavoritos(item.properties.name)}} >❤️</span> 
 								</button>
 
 							</div>
