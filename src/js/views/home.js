@@ -60,15 +60,26 @@ export const Home = () => {
 								<p>Terraine: {item.properties.name}</p>
 							</div>
 							<div className="button-footer">
-								<Link to={`/planets/${item._id}`} className="btn btn-primary">Learn More</Link>
-								<button className="favorite-button">
-									<span className="heart-icon" aria-label="Añadir a favoritos" role="img">❤️</span>
-								</button>
-
-							</div>
-						</div>
-					)
-				})}
+                    <Link to={`/planets/${item._id}`} className="btn btn-primary">Learn More</Link>
+                    <button className="favorite-button">
+                        <span className="heart-icon" 
+                            aria-label="Añadir a favoritos" 
+                            role="img"
+                            onClick={() => {
+                                if (store.favorites.find((favorite) => favorite.name === item.properties.name)) {
+                                    actions.eliminarFavoritos(item.properties.name)
+                                } else {
+                                    actions.guardarFavoritos(item.properties.name)
+                                }
+                            }}>
+                            {store.favorites.find((favorite) => favorite.name === item.properties.name) ? "❤️" : (<i className="far fa-heart"></i>)}
+                        </span>
+                    </button>
+                </div>
+            </div>
+        )
+    })}
+    {/* Clones de la carta */}
 				{/* Clones de la carta */}
 			</div>
 		</div>

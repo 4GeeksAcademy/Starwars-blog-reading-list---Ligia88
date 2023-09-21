@@ -35,7 +35,7 @@ useEffect(()=>{
     <h1/> {search?.properties?.climate} <h1/>
     <h1/> {search?.properties?.terraine} <h1/>
     <h1/> {search?.properties?.population} <h1/>
-    
+    <h1/> https://starwars-visualguide.com/ <h1/>
     </>
 
 
