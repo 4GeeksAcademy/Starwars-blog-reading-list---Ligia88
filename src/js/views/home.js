@@ -30,7 +30,13 @@ export const Home = () => {
 								<span className="heart-icon" 
 								aria-label="Añadir a favoritos" 
 								role="img"
-									onClick = {()=>{actions.guardarFavoritos(item.properties.name)}} >❤️</span> 
+									onClick = {()=>{
+										if(store.favorites.find((favorite)=>favorite.name==item.properties?.name)){
+                                         actions.eliminarFavoritos(item.properties.name)
+										}else {
+									     actions.guardarFavoritos(item.properties.name)
+										}
+										}} >{store.favorites.find((favorite)=> favorite.name==item.properties?.name) ? "❤️" : (<i className="far fa-heart" ></i>) }</span> 
 								</button>
 
 							</div>

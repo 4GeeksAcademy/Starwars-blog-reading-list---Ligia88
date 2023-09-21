@@ -58,14 +58,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			guardarFavoritos(nombre) {
+			guardarFavoritos:(nombre) => {
 				const store = getStore();
 				const fav = store.favorites;
 				const newFavoritos = [...fav, { name: nombre, id: fav.length }];
 				setStore({ favorites: newFavoritos })
-				const actions = getActions();
-				const item = { name: nombre, id: fav.length }
-				console.log(nombre)
+				
+			},
+			
+			eliminarFavoritos: (nombre) => { 
+				const store = getStore();
+				const newFavoritos = store.favorites.filter((favorite)=> favorite.name != nombre)
+				setStore({ favorites: newFavoritos })
 			}
 
 

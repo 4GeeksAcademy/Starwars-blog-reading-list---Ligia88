@@ -22,14 +22,14 @@ export const Navbar = () => {
             >
               {/* Favorites {store.favorite.length} */}
             </button>
-            <ul className="dropdown-menu">
-              {/* {store.favorite.map((item)=> {
+            <ul className="dropdown-menu dropdown-menu-end">
+              {store.favorites.map((item)=> {
                 return <li>
-                <a className="dropdown-item" href="#">
+                <Link className="dropdown-item"to="!#">
                   {item.name}
-                </a>
+                </Link>
               </li>
-              })} */}
+              })}
             </ul>
           </div>
         </div>
