@@ -35,8 +35,8 @@ useEffect(()=>{
     <h1/> {search?.properties?.climate} <h1/>
     <h1/> {search?.properties?.terraine} <h1/>
     <h1/> {search?.properties?.population} <h1/>
-    <img src={"https://starwars-visualguide.com/assets/img/characters/"+search?.properties?.uid+".jpg"}  alt="Personajes" />
-    <img src={"https://starwars-visualguide.com/assets/img/planets/"+search?.properties?.uid+".jpg"}  alt="Planets" />
+    <img src={`https://starwars-visualguide.com/assets/img/characters/${search?.properties?.uid}.jpg`} alt="Personajes" />
+    <img src={`https://starwars-visualguide.com/assets/img/planets/${search?.properties?.uid}.jpg`} alt="Planets" />
     </>
 
 
